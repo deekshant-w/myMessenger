@@ -61,7 +61,7 @@ document.querySelector("#saveMsg").addEventListener("click", () => {
         processData: false,
         contentType: false,
         success: function(a){
-            location.reload()
+            location.reload();
         },
         failure: function(a){
             console.log(a)

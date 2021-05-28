@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from main.models import *
 
 def landing(request):
     if request.method == "POST":
