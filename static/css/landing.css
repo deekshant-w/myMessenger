@@ -1,0 +1,32 @@
+.container{
+    margin-top: 5vh;
+    border: 1px solid transparent;
+    /* padding: 1vh 0%; */
+}
+
+.message{
+    background-color: white;
+    padding: 2%;
+    border-radius: 5px;
+    margin-bottom: 3vh;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.newBut{
+    width: 3.5rem;
+    height: 3.5rem;
+    position: fixed;
+    right: 2vh;
+    bottom: 2vh;
+}
+
+.formModal{
+    padding: 1.2rem;
+}
+
+.filepond--credits{
+    display: none;
+}
