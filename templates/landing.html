@@ -80,7 +80,7 @@
 
         {% if m.files %}
         {% for f in m.files.all %}
-        <a href="{{f.file.url}}" class="files">{{f.file.name}}</a>
+        <a href="{{f.file.url}}" class="files" download>{{f.file.name}}</a>
         {% endfor %}
         {% endif %}
 

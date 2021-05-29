@@ -10,8 +10,8 @@ def landing(request):
             user = request.META['HTTP_USER_AGENT']
         )
         msg.save()
-        for f in request.FILES:
-            temp = Attatchments.objects(file=f)
+        for f in request.FILES.getlist("file",[]):
+            temp = Attatchments(file=f)
             temp.save()
             msg.files.add(temp)
     

@@ -11,7 +11,7 @@ class Message(models.Model):
     user = models.CharField(max_length=256, blank=True, null=True)
 
     def __str__(self) -> str:
-        return self.heading or self.message[:20] or self.tags[:20] or self.edited
+        return self.heading or self.message[:20] or self.tags[:20] or self.edited.__str__()
 
 def nameTime(instance, filename):
     parts = filename.split('.')
