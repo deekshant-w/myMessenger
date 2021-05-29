@@ -69,3 +69,6 @@ document.querySelector("#saveMsg").addEventListener("click", () => {
         }
     });
 })
+
+// target = "_blank"
+document.querySelectorAll('a[rel=nofollow]').forEach((ele)=>{ele.target = "_blank"})

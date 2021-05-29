@@ -13,6 +13,7 @@
 
 body{
     background-color: whitesmoke;
+    word-break: break-all;
 }
 
 .newBut{
@@ -29,4 +30,9 @@ body{
 
 .filepond--credits{
     display: none;
+}
+
+.files{
+    display: block;
+    margin-bottom: 0.5rem;
 }

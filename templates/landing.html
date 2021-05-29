@@ -51,31 +51,41 @@
     </div>
 </div>
 
-
 <div class="container">
+    {% for m in msgs %}
     <div class="message shadow-1-strong">
+        
+        {% if m.heading %}
         <div class="msgHead">
-            <h3>Head</h3>
+            <h4>{{m.heading | capfirst}}</h4>
         </div>
-        <div class="msgTags">
-            Tags:
-        </div><br>
-        <div class="msgMsg">
-            <p>asd</p>
-        </div>
-    </div>
+        {% endif %}
 
-    <div class="message shadow-1-strong">
-        <div class="msgHead">
-            <h4>Head</h4>
-        </div>
+        {{ m.edited }}<br>
+        {{ m.user }}
+        
+        {% if m.tags %}
         <div class="msgTags">
-            Tags:
-        </div><br>
-        <div class="msgMsg">
-            <p>asd</p>
+            <b>Tags: </b>{{m.tags}}
         </div>
+        {% endif %}
+
+        <hr>
+
+        {% if m.message %}
+        <div class="msgMsg">
+            <p>{{m.message|urlize }}</p>
+        </div><br>
+        {% endif %}
+
+        {% if m.files %}
+        {% for f in m.files.all %}
+        <a href="{{f.file.url}}" class="files">{{f.file.name}}</a>
+        {% endfor %}
+        {% endif %}
+
     </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
