@@ -81,6 +81,5 @@ document.querySelector("#refBut").addEventListener("click",()=>{
                 caches.delete(name);
         });
     }catch(err){};
-    
     window.location.href = window.location.href
 })
