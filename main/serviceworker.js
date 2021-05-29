@@ -23,14 +23,12 @@ var filesToCache = [
     '/static/images/icons/splash-1668x2388.png',
     '/static/images/icons/splash-2048x2732.png',
 
-    '/static/css/landing.css', 
     '/static/dropzone/basic.min.css', 
     '/static/dropzone/dropzone-amd-module.min.js', 
     '/static/dropzone/dropzone.min.css', 
     '/static/dropzone/dropzone.min.js', 
     '/static/icons/email.png', 
     '/static/icons/mail.png', 
-    '/static/js/landing.js'
 ];
 
 // Cache on install
