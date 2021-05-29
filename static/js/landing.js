@@ -72,3 +72,15 @@ document.querySelector("#saveMsg").addEventListener("click", () => {
 
 // target = "_blank"
 document.querySelectorAll('a[rel=nofollow]').forEach((ele)=>{ele.target = "_blank"})
+
+// refresh page
+document.querySelector("#refBut").addEventListener("click",()=>{
+    try{
+        caches.keys().then(function(names) {
+            for (let name of names)
+                caches.delete(name);
+        });
+    }catch(err){};
+    
+    window.location.href = window.location.href
+})

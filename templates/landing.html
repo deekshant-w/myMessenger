@@ -14,10 +14,18 @@
 
 {% block body %}
 
-<button type="button" class="btn btn-primary btn-floating newBut" data-mdb-toggle="modal"
+<!-- refresh -->
+<button type="button" class="btn btn-success btn-floating refreshBut btnBig" id='refBut'>
+    <i class="fas fa-redo-alt"></i>
+</button>
+
+
+<!-- new message -->
+<button type="button" class="btn btn-primary btn-floating newBut btnBig" data-mdb-toggle="modal"
     data-mdb-target="#addMessageModal">
     <i class="fas fa-plus"></i>
 </button>
+
 <!-- Modal -->
 <div class="modal fade" id="addMessageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
