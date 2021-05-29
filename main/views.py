@@ -1,5 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from main.models import *
+from django.conf import settings
+import os
 
 def landing(request):
     if request.method == "POST":
@@ -16,4 +18,15 @@ def landing(request):
             msg.files.add(temp)
     
     msgs = Message.objects.all().order_by('-edited')
+    exist = {} #id:bool
+    files = Attatchments.objects.all()
+    for file in files:
+        if not os.path.isfile(str(settings.BASE_DIR) + file.file.url):
+            try:
+                parent = file.message.all()[0]
+                parent.message += f"<br><del>{file.file.name}</del>"
+                parent.save()
+            except Exception as e:
+                print(e)
+            file.delete()
     return render(request, "landing.html",{'msgs':msgs})

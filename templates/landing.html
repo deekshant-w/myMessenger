@@ -74,7 +74,7 @@
 
         {% if m.message %}
         <div class="msgMsg">
-            <p>{{m.message|urlize }}</p>
+            <p>{{m.message|safe|urlize }}</p>
         </div><br>
         {% endif %}
 
