@@ -28,7 +28,7 @@ var filesToCache = [
     '/static/dropzone/dropzone.min.css', 
     '/static/dropzone/dropzone.min.js', 
     '/static/icons/email.png', 
-    '/static/icons/mail.png', 
+    '/static/icons/mail.png',
 ];
 
 // Cache on install
