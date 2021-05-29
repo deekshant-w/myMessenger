@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-xy9go87fiu$(6l)u^atn$b=nmen@f8^)wftrfil6s_treul3xr'
+SECRET_KEY = os.environ.get("SECRET_KEY",'django-insecure-xy9go87fiu$(6l)u^atn$b=nmen@f8^)wftrfil6s_treul3xr')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -169,3 +170,7 @@ PWA_APP_SPLASH_SCREEN = [
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 PWA_SERVICE_WORKER_PATH = BASE_DIR / 'main' / 'serviceworker.js'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
