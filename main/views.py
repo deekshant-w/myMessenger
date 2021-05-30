@@ -18,7 +18,6 @@ def landing(request):
             msg.files.add(temp)
     
     msgs = Message.objects.all().order_by('-edited')
-    exist = {} #id:bool
     files = Attatchments.objects.all()
     for file in files:
         if not os.path.isfile(str(settings.BASE_DIR) + file.file.url):

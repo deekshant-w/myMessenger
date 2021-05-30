@@ -84,3 +84,8 @@ document.querySelector("#refBut").addEventListener("click",()=>{
     
     window.location.href = window.location.href
 })
+
+// offline file opening
+// document.querySelectorAll('a')[1].href = "#"
+// function x(){alert('a');return false}
+// document.querySelectorAll('a')[1].onclick = x;

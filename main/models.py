@@ -16,7 +16,7 @@ class Message(models.Model):
 def nameTime(instance, filename):
     parts = filename.split('.')
     unq = timezone.now().strftime("%y_%m_%d_%H_%M_%S")
-    return f'{parts[0]}_{unq}.{parts[1]}'
+    return f'{parts[0]}_{unq}.{parts[-1]}'
 
 class Attatchments(models.Model):
     file = models.FileField(upload_to=nameTime)
